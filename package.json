@@ -2,9 +2,6 @@
   "name": "buscador-imagenes-api",
   "version": "1.0.0",
   "type": "module",
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
@@ -17,5 +14,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 } 

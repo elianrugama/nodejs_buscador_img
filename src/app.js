@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Ruta de salud
+// Ruta principal
 app.get('/', (req, res) => {
   res.json({ 
     status: 'ok',
@@ -16,10 +16,10 @@ app.get('/', (req, res) => {
   });
 });
 
-// Rutas
+// Rutas de búsqueda
 app.use('/api', imageSearchRouter);
 
-// Manejo de errores
+// Errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ 
