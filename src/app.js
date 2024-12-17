@@ -8,6 +8,14 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Ruta de salud
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'ok',
+    message: 'API de búsqueda de imágenes funcionando'
+  });
+});
+
 // Rutas
 app.use('/api', imageSearchRouter);
 
@@ -20,6 +28,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 }); 
