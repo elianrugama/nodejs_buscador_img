@@ -151,6 +151,48 @@ restartPolicyType = "ON_FAILURE"
 }
 ```
 
+## 🌐 Demo en Vivo
+
+API desplegada: [https://nodejsbuscadorimg-production.up.railway.app/](https://nodejsbuscadorimg-production.up.railway.app/)
+
+### Prueba Rápida
+
+Haz clic en este enlace para ver una búsqueda de ejemplo:
+[https://nodejsbuscadorimg-production.up.railway.app/api/images/gatitos?limit=10](https://nodejsbuscadorimg-production.up.railway.app/api/images/gatitos?limit=10)
+
+### Ejemplos de Uso
+
+1. Verificar estado de la API:
+```http
+GET https://nodejsbuscadorimg-production.up.railway.app/
+```
+
+Respuesta:
+```json
+{
+  "status": "ok",
+  "message": "API de búsqueda de imágenes funcionando"
+}
+```
+
+2. Buscar imágenes:
+```http
+GET https://nodejsbuscadorimg-production.up.railway.app/api/images/gatos?limit=5
+```
+
+Respuesta:
+```json
+{
+  "success": true,
+  "query": "gatos",
+  "count": 5,
+  "images": [
+    "https://ejemplo.com/imagen1.jpg",
+    "https://ejemplo.com/imagen2.jpg",
+    // ...
+  ]
+}
+```
 
 ---
 Desarrollado con ❤️ por elianrugama
